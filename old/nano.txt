@@ -1,0 +1,19 @@
+How board layouts are stored:
+
+
+@@@@@@@@@@@@@@@@O@@@@@@@@@@@@@@@@
+                |Converted to binary
+                V
+111111111111111101111111111111111
+                |Converted to Denary
+                V
+            4294967295
+                |From Denary to hexadecimal
+                V
+             1FFFFFFFF
+FFFFFFFF				8 Byte
+4294967295				10 Byte(Though the number would only be 64 bits, .txt saves it as ascii)
+111111111111111101111111111111111	33 Byte(Though a 33 bit bitset, When saved in .txt, each 1/0 becomes ascii)
+@@@@@@@@@@@@@@@@O@@@@@@@@@@@@@@@@	33 Byte
+
+24.24% of original size
